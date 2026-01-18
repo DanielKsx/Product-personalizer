@@ -29,7 +29,7 @@ const Product = props => {
     const selectedSize = props.sizes.find(size => size.name === currentSize);
     const additionalPrice = selectedSize ? selectedSize.additionalPrice :0;
     return props.basePrice + additionalPrice;
-  }, [currentSize, props.basePrice]);
+  }, [currentSize, props.sizes, props.basePrice]);
 
   return (
     <article className={styles.product}>
